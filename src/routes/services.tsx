@@ -30,6 +30,28 @@ function ServicesPage() {
   return (
     <SiteLayout>
       <PageHero eyebrow="Services" title="Everything plumbing & heating, under one trusted roof" subtitle="One Sheffield team for every job — from a leaky tap to a full central heating overhaul." />
+
+      <section className="container-tight pt-12">
+        <div className="grid gap-5 md:grid-cols-2">
+          <Link to="/emergency" className="group relative overflow-hidden rounded-2xl bg-emergency p-8 text-emergency-foreground shadow-elegant transition-transform hover:-translate-y-1">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+              <Flame className="h-3.5 w-3.5" /> 24/7 Callout
+            </span>
+            <h2 className="mt-4 font-display text-2xl font-bold md:text-3xl">Emergency Plumbing</h2>
+            <p className="mt-2 text-sm text-emergency-foreground/90">Burst pipes, leaks, no heat or hot water — engineer on site within 60 minutes across Sheffield.</p>
+            <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold">View emergency service <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+          </Link>
+          <Link to="/boilers" className="group relative overflow-hidden rounded-2xl bg-gradient-cta p-8 text-primary-foreground shadow-elegant transition-transform hover:-translate-y-1">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+              <ThermometerSun className="h-3.5 w-3.5" /> From £1,895
+            </span>
+            <h2 className="mt-4 font-display text-2xl font-bold md:text-3xl">Boiler Installations</h2>
+            <p className="mt-2 text-sm text-primary-foreground/90">A-rated combi, system & regular boilers. Free survey, 10-year warranty and finance from £25/month.</p>
+            <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold">Explore boiler options <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+          </Link>
+        </div>
+      </section>
+
       <section className="container-tight py-16">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {all.map(({ icon: Icon, title, desc, price }) => (

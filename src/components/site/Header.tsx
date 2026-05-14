@@ -5,12 +5,10 @@ import { SITE } from "@/lib/site";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/emergency", label: "Emergency" },
-  { to: "/boilers", label: "Boilers" },
   { to: "/areas", label: "Areas" },
   { to: "/reviews", label: "Reviews" },
+  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
